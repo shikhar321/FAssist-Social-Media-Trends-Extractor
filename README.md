@@ -1,2 +1,1 @@
-# FAssist-Social-Media-Trends-Extractormpw
-kgkm40ig
+# FAssist-Social-Media-Trends-Extractor
