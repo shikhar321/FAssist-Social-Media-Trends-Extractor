@@ -1,0 +1,252 @@
+html::-webkit-scrollbar{
+	width: 1vw;
+}
+html::-webkit-scrollbar-thumb{
+    background:#666666;
+	border-radius: 50vw;
+}
+html::-webkit-scrollbar-button{
+    display: none;
+}
+html::-webkit-scrollbar-corner{
+    background:  #b3b3b3;
+}
+html::-webkit-scrollbar-track{
+    background:  #b3b3b3;
+}
+a{
+    text-decoration: none;
+}
+.text-center{
+    text-align: center !important;
+}
+.hover-me:hover{
+    margin-bottom: 2px ;
+    border-bottom: 2px solid #0dcaf0;
+}
+
+.mt-n2 {
+    margin-top: -0.65rem !important;
+}
+
+.select-category{
+    cursor: pointer;
+}
+.form-container{
+    width: 80vw;
+    margin: auto;
+}
+#electronic-appliances-form{
+    display: none;
+}
+#clothings-form{
+    display: none;
+}
+.analysis-container , .form-nav , .form-container{
+    position: relative;
+    top: 110px ;
+}
+
+.nav-contianer{
+    z-index: 1000 !important;
+    width: 100% !important;
+    top: -10px !important;
+}
+.logo-image{
+    position: relative;
+    top: 5px ;
+}
+.top-performer{
+    margin-left: 0.5vw;
+    width: 19vw;
+    height: 500px ; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.product-image{
+     
+    width: 95%;
+    height: 60% ; 
+    position: relative;
+    box-sizing: border-box;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.product-rating{
+    position: absolute;
+    background-color: black;
+    width: 25%;
+    color: white;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+}
+.product-name{
+    height: 15% ; 
+    width: 95%; 
+    overflow: hidden;
+    
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+.product-addition-info{
+    height: 20%;
+    width: 95%; 
+    
+
+}
+#top-performer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.top-margin{
+    margin-top: 100px !important;
+}
+.keywords-container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.keyword-image-container{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around ; 
+    display: none ;
+}
+.image-frame{
+    width: 30%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50px;
+    
+}
+.keywords-bricks{
+    width : 20% ; 
+    overflow: hidden;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.main-tweet-area{
+    height: auto !important;
+}
+/*Making the Home Screen Carousel
+This the rotating Home Screen Carousel:
+(Innovation)*/
+.slidershow{
+	position: relative;
+    top: 40px;
+    margin: auto;
+  	margin-top: 20px ;
+    margin-bottom: 20px;
+  	overflow-x: hidden;
+  	border-radius: 10px;
+    /* margin-bottom: 40px; */
+  	
+  	/*This box shadow is with zero length of shodow but with blur 
+  	as non zero value this provides a neon look to the design template*/
+
+  	/*This is (Innovation)*/
+}
+
+.navigation{
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar{
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.bar:hover{
+  background: #fff;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+.tweet-area{
+    width: 100%;
+    display: flex;
+}
+.user-profile-pic{
+    width: 10%;
+}
+.profile-pic-frame{
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    border: 1px solid white ;
+    border-radius: 150px;
+    margin: auto;
+    position: relative;
+    top: 40px;
+}
+.rest-area{
+    width: 85%;
+    position: relative;
+    top: 30px;
+    padding-left: 4%;
+    box-sizing: border-box;
+}
+.tweet-info{
+    width: 60%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.hover-class:hover{
+    color: orange;
+}
+

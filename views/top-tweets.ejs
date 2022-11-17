@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title%>
+    </title>
+    <link rel="shorcut icon" type="image/x-icon" href="/images/Logo__.png">
+    <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/4cac1a6/css/all.css" rel="stylesheet"
+        type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/main-home-page.css">
+</head>
+
+<body>
+
+    <%- include("navbar.ejs") ; %>
+
+
+
+        <% for(let tweet of tweets){%>
+            <div
+                class="form-container border border-5 border-primary border-4 rounded rounded-4 ps-3 pe-3 border-opacity-75 bg-dark main-tweet-area mb-5">
+                <div class="tweet-area">
+                    <div class="user-profile-pic">
+                        <div class="profile-pic-frame">
+                            <img src="<%= tweet.userImageURL%>"
+                                width="100%" height="100%">
+                        </div>
+                    </div>
+                    <div class="rest-area">
+                        <div class="user-name-area text-warning fs-2 fw-bolder">
+                            <%= tweet.createdBy %> &nbsp; &nbsp; &nbsp;
+                                <span class="fs-5 text-white-50">
+                                    <%= tweet.creationDate %>
+                                </span>
+                        </div>
+                        <div class="text-area text-white fs-5">
+                            <%= tweet.text %>
+                        </div>
+                    </div>
+                </div>
+                <% if(tweet.media.length != 0 ){%>
+                    <div class="slidershow">
+                        <div class="slides">
+                            <%if(tweet.media.length == 1){%>
+                                <div class="slide s1">
+                                    <div class="tweet-image-container">
+                                        <img src="<%= tweet.media[0]%>" alt="" >
+                                    </div>
+                                </div>
+                            <%}else{%>
+                                <input type="radio" name="r" id="r1" checked>
+                                <%for(let i = 1 ; i < tweet.media.length ; i += 1){%>
+                                    <input type="radio" name="r" id="r<%= i+1%>">
+                                <%}%>
+                                <div class="slide s1">
+                                    <div class="tweet-image-container">
+                                        <img src="<%= tweet.media[0]%>" alt="" >
+                                    </div>
+                                </div>
+                                <%for(let i = 1 ; i < tweet.media.length ; i += 1){%>
+                                    <div class="slide">
+                                        <div class="tweet-image-container">
+                                            <img src="<%= tweet.media[i]%>" alt="" >
+                                        </div>
+                                    </div>
+                                <%}%>
+                            <%}%>
+                            
+                            
+                        </div>
+
+                        <%if(tweet.media.length > 1){%>
+                            <div class="navigation">
+                                <%for(let i = 0 ; i < tweet.media.length ; i += 1){%>
+                                    <label for="r<% i + 1%>" class="bar"></label>
+                                <%}%>
+                            </div>
+                        <%}%>
+                    </div>
+                    <%}%>
+                        <div class="tweet-info text-white-50 fs-4 fw-bold">
+                            <div class="likes">
+                                <i class="fas fa-heart"></i>&nbsp; <%= tweet.likes%>
+                            </div>
+                            <div class="retweets">
+                                <i class="fas fa-retweet"></i>&nbsp;<%= tweet.retweet%>
+                            </div>
+                            <div class="gradepoints">
+                                <i class="far fa-star-christmas"></i>&nbsp; <%= tweet.gradePoint%>
+                            </div>
+                            <div class="position">
+                                <i class="fas fa-medal"></i>&nbsp; <%= tweet.pos%>
+                            </div>
+
+                        </div>
+            </div>
+            <%}%>
+
+
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                    crossorigin="anonymous"></script>
+</body>
+
+</html>

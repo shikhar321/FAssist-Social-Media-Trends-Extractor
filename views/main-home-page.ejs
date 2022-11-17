@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title%>
+    </title>
+    <link rel="shorcut icon" type="image/x-icon" href="/images/Logo__.png">
+    <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/4cac1a6/css/all.css" rel="stylesheet"
+        type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/main-home-page.css">
+</head>
+
+<body>
+    <%-include('navbar.ejs')-%>
+    <div class="container d-flex justify-content-evenly mb-3 form-nav">
+        <div class="select-category text-black-50 fw-bolder fs-5" id="smart-device-btn">
+            Smart Devices
+        </div>
+        
+        
+        <div class="select-category text-black-50 fw-bolder fs-5" id="electric-app-btn">
+            Electronic Appliances
+        </div>
+
+        
+
+        <div class="select-category text-black-50 fw-bolder fs-5" id="clothings-btn">
+            Fashion
+        </div>
+    </div>
+
+    <div id="smart-devices-form">
+        <form class="form-container border border-5 border-primary border-4 rounded rounded-4 ps-3 pe-3 border-opacity-75 bg-dark" action="/users/category-analysis/smart-devices" method="GET">
+            <p class="fs-3 text-warning fw-bolder ">
+                Category : Smart Devices
+            </p>
+            <div class="input-group input-group-lg mb-5 mt-5">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter Lower Demarcation(in ₹)</span>
+                <input type="text" class="form-control" required aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg" name="lowerlimit">
+            </div>
+
+            <div class="input-group input-group-lg mb-5">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Enter Upper Demarcation(in ₹)</span>
+                <input type="text" class="form-control" required aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg" name="upperlimit">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Select Product for Analysis &nbsp; &nbsp; <i
+                        class="fas fa-caret-down"></i></label>
+                <select class="form-select" id="inputGroupSelect01" name="product">
+                    <option selected>Choose</option>
+                    <option value="Phone">Phones</option>
+                    <option value="SmartWatch">Smart Watches</option>
+                    <option value="Laptop">Laptops</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-info btn-lg mt-4 ms-4 mb-3">
+                <span class="text-white">
+                    View Analysis
+                </span>
+            </button>
+
+
+        </form>
+    </div>
+
+    <div id="electronic-appliances-form">
+        <form class="form-container border border-5 border-primary border-4 rounded rounded-4 ps-3 pe-3 border-opacity-75 bg-dark" action="/users/category-analysis/electronic-appliances" method="GET">
+            <p class="fs-3 text-warning fw-bolder">
+                Category : Electronic Appliances
+            </p>
+            <div class="input-group input-group-lg mb-5 mt-5">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter Lower Demarcation(in ₹)</span>
+                <input type="text" class="form-control" required aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg" name="lowerlimit">
+            </div>
+
+            <div class="input-group input-group-lg mb-5">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Enter Upper Demarcation(in ₹)</span>
+                <input type="text" class="form-control" required aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg" name="upperlimit">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Select Product for Analysis &nbsp; &nbsp; <i
+                        class="fas fa-caret-down"></i></label>
+                <select class="form-select" id="inputGroupSelect01" name="product">
+                    <option selected>Choose</option>
+                    <option value="LEDs">LEDs</option>
+                    <option value="WashingMachine">Washing Machines</option>
+                    <option value="AirConditioners">Air Conditioners</option>
+                    <option value="Microwaves">Microwaves</option>
+                    <option value="WaterPurifers">Water Purifers</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-info btn-lg mt-4 ms-4 mb-3">
+                <span class="text-white">
+                    View Analysis
+                </span>
+            </button>
+
+
+        </form>
+    </div>
+
+    <div id="clothings-form">
+        <form class="form-container border border-5 border-primary border-4 rounded rounded-4 ps-3 pe-3 border-opacity-75 bg-dark" action="/users/category-analysis/clothings" method="GET">
+            <p class="fs-3 text-warning fw-bolder">
+                Category : Fashion
+            </p>
+            <div class="input-group input-group-lg mb-5 mt-5">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Enter Lower Demarcation(in ₹)</span>
+                <input type="text" class="form-control" required aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg" name="lowerlimit">
+            </div>
+    
+            <div class="input-group input-group-lg mb-5">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Enter Upper Demarcation(in ₹)</span>
+                <input type="text" class="form-control" required aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-lg" name="upperlimit">
+            </div>
+    
+            <div class="input-group input-group-lg mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Select Product for Analysis &nbsp; &nbsp; <i
+                        class="fas fa-caret-down"></i></label>
+                <select class="form-select" id="inputGroupSelect01" name="product">
+                    <option selected>Choose</option>
+                    <option value="Make%20Up">Make-up</option>
+                    <option value="Skin%20Care">Skin Care</option>
+                    <option value="Hair%20Care">Hair Care</option>
+                </select>
+            </div>
+    
+            <button type="submit" class="btn btn-info btn-lg mt-4 ms-4 mb-3">
+                <span class="text-white">
+                    View Analysis
+                </span>
+            </button>
+    
+    
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/js/main-home-page.js"></script>
+    
+</body>
+
+</html>

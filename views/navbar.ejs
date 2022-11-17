@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg position-fixed ms-auto  border-5 border-bottom mt-n2 nav-contianer bg-dark ">
+    <div class="container-fluid d-flex justify-content-between">
+        <a class="navbar-brand text-white me-5 " href="/users/home-page">
+            <img src="/images/logo-final-2.png" height="90px" width="120px" class="logo-image" /> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse m-auto mt-4" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item  ">
+                    <a class="nav-link active text-info fs-4 fw-bolder text-center me-4 hover-me mt-1 mt-0"
+                        aria-current="page"></a>
+                </li>
+                <li class="nav-item  ">
+                    <a class="nav-link active text-info fs-4 fw-bolder text-center me-4 hover-me mt-1"
+                        aria-current="page" href="/users/home-page">Category Analysis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-info fs-4 fw-bolder text-center me-4 hover-me mt-1"
+                        aria-current="page" href="/users/get-social-trends/fashion">Fashion Trends</a>
+                </li>
+
+                <li class="nav-item  ">
+                    <div class="nav-link text-info fs-4 fw-bolder text-center me-4 hover-me mt-1" >
+                        <div class="dropdown">
+                            <div class=" dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Top Tweets
+                            </div>
+                            <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item" href="/users/get-top-tweets/fashion">In Fashion</a></li>
+                                <li><a class="dropdown-item" href="/users/get-top-tweets/tech">In Tech</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link text-info fs-4 fw-bolder text-center me-5 hover-me mt-1" href="/users/log-out">Log-out</a>
+                </li>
+
+                <li class="nav-item  ">
+                    <a class=" ms-5 nav-link text-info fs-4 fw-bolder text-center  mt-1"> Hi
+                        <%= user.name%>🖐😀</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

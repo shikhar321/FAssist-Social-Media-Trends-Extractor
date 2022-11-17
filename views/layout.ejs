@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title%>
+    </title>
+    <link rel="shorcut icon" type="image/x-icon" href="/images/Logo__.png">
+    <script src="https://kit.fontawesome.com/22406f9d4d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/4cac1a6/css/all.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/home.css"> 
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"> 
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+</head>
+<body>
+   
+    <div class="main-container">
+        
+    
+    </div>
+    <div id = "container">
+
+        <div id = "image-container">
+            <img src="./images/home.png" height="100%" width="100%">
+        </div>
+
+        <div id = "form-container">
+            <div id="form-heading">
+                <div id="Web-logo">
+                    <img src="/images/logo-final.png" height="90px" width="120px" > 
+                    
+                    
+                </div>
+
+                <div id="Web-message" class="txt-center">
+                        
+                    Businesss opportunities are like buses, there's always another one coming.
+                </div>
+            </div>
+
+            <div>
+                <%- body %>
+            </div>
+
+            
+            
+            <a href="/" class="go-back">
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+    </div>
+
+    
+    <script type="text/javascript" src="js/entryJs.js"></script>
+
+</body>
+</html>
